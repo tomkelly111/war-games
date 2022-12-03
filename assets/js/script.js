@@ -95,18 +95,22 @@ function checkWinner(computerWeapon) {
         }
 } }
 
-function endGame() {
-
-}
 
 function increaseUserScore() {
-    console.log("increase user score success")
+    let score = parseInt(document.getElementById("won").innerText);
+    document.getElementById("won").innerText = ++score;
 }
 
 function increaseComputerScore() {
-    console.log("increase comp score success")
+    let score = parseInt(document.getElementById("lost").innerText);
+    document.getElementById("lost").innerText = ++score;
 }
 
 function draw(){
     console.log("draw sucess")
+}
+
+
+function endGame() {
+
 }
