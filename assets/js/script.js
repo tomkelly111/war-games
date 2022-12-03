@@ -97,9 +97,6 @@ function checkWinner(computerWeapon) {
 }
 
 
-function endGame() {
-        
-}
 
 
 /**Increaes user score by 1 and runs endGame() function*/
@@ -124,6 +121,14 @@ function increaseComputerScore() {
     endGame();
 }
 
+/** displays text showing result was a tie and the runs endGame() function */
 function draw() {
-
+    let playAgain = document.getElementById("play-again");
+    playAgain.innerHTML = "IT'S A TIE! Want to play again? Choose your weapon!"
+    endGame();
 }
+
+function endGame() {
+        
+}
+
