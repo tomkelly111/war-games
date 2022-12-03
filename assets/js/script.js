@@ -48,11 +48,15 @@ function scissorsGame() {
 
 
 function startGame() {
-    console.log("statGame success")
+    playButton = document.getElementById("play-button");
+    playButton.setAttribute("id", "show-play-button");
+    
+    let letsBattle = document.getElementById("show-play-button");
+    letsBattle.addEventListener("click", runGame);
 }
 
 function runGame() {
-
+    console.log("runGame success")
 }
 
 function checkWinner(computerWeapon) {
