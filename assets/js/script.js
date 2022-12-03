@@ -28,7 +28,9 @@ function gameSelector(weaponType) {
 }
 
 function rockGame() {
-    console.log("rockGame success")
+    let rockElement = document.getElementById("user-choice");
+    rockElement.outerHTML = `<span id="user-choice" data-type="0"><i class="fa-solid fa-hand-fist"></i></span>`;
+    startGame()
 }
 
 function paperGame() {
@@ -42,7 +44,7 @@ function scissorsGame() {
 
 
 function startGame() {
-
+    console.log("statGame success")
 }
 
 function runGame() {
