@@ -104,17 +104,24 @@ function endGame() {
 
 /**Increaes user score by 1 and runs endGame() function*/
 function increaseUserScore() {
-    /** increases user's score by 1 */
-    let Score = parseInt(document.getElementById("won").innerText);
-    document.getElementById("won").innerText = ++Score;
+    /** increases user's score by 1 - code taken from Love Maths*/
+    let score = parseInt(document.getElementById("won").innerText);
+    document.getElementById("won").innerText = ++score;
     /** displays text that offers a new game, then runs endGame() function */
     let playAgain = document.getElementById("play-again");
     playAgain.innerHTML = "YOU WIN! Want to play again? Choose your weapon!"
     endGame();
 } 
 
+/**Increaes computer score by 1 and runs endGame() function*/
 function increaseComputerScore() {
-    console.log("increase computer score success")
+    /** increases computer's score by 1 - code taken from Love Maths*/
+    let score = parseInt(document.getElementById("lost").innerText);
+    document.getElementById("lost").innerText = ++score;
+    /** displays text that offers a new game, then runs endGame() function */
+    let playAgain = document.getElementById("play-again");
+    playAgain.innerHTML = "YOU LOST! Want to play again? Choose your weapon!"
+    endGame();
 }
 
 function draw() {
