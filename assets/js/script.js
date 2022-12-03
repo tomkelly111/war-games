@@ -7,3 +7,37 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
+
+
+function gameSelector() {
+}
+
+
+function startGame() {
+
+}
+
+
+
+function checkWinner() {
+
+}
+
+
+function endGame() {
+        
+}
+
+
+
+function increaseUserScore() {
+
+} 
+
+function increaseComputerScore() {
+   
+}
+
+function draw() {
+
+}
