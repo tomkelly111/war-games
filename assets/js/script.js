@@ -9,133 +9,47 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-/**
- * This function takes the data-type (weaponType) of the item the user clicked on and changes the image shown 
- * to represent the user's chosen "weapon". The function then runs the startGame() function.
- */
 function gameSelector(weaponType) {
-    if (weaponType === "0") {
-        let rockElement = document.getElementById("user-choice");
-        rockElement.outerHTML = `<span id="user-choice" data-type="0"><i class="fa-solid fa-hand-fist"></i></span>`;
-        startGame();
-    } else if (weaponType === "1") {
-        let paperElement = document.getElementById("user-choice");
-        paperElement.outerHTML = `<span id="user-choice" data-type="1"><i class="fa-solid fa-hand"></i></span>`;
-        startGame();
-    } else if (weaponType === "2") {
-        let scissorsElement = document.getElementById("user-choice");
-        scissorsElement.outerHTML = `<span id="user-choice" data-type="2"><i class="fa-solid fa-hand-scissors"></i></span>`;
-        startGame();
-        /**
-        * The next else if statement applies if the random weapon option is chosen. A random number between 0-2
-        * is generated and fed back into the start of the funciton.
-        */
-    } else if (weaponType === "3") {
-        let randomWeapon = Math.floor(Math.random() * 3);
-        let weaponType = randomWeapon.toString();
-        gameSelector(weaponType);
-    } /*resets image on computer side to question mark*/
-    let computerChoice = document.getElementById("computer-choice");
-    computerChoice.innerHTML = `<i class="fa-regular fa-circle-question"></i>`;
-    /*deletes results text when new game is started*/
-    let playAgain = document.getElementById("play-again");
-    playAgain.innerHTML = "";
+
 }
 
-/** This function displays the play button and when the play button is clicked 
- * a random number between 0-2 is generated for the computer's weapon, the computer's weapon is then
- * displayed and the checkWinner() function is ran.
- */
+function rockGame() {
+
+}
+
+function paperGame() {
+
+}
+
+function scissorsGame() {
+
+}
+
+
 function startGame() {
-    /** Changes ID of play-button so that it is visible once user has selected their weapon */
-    playButton = document.getElementById("play-button");
-    playButton.setAttribute("id", "show-play-button");
 
-    let letsBattle = document.getElementById("show-play-button");
-    letsBattle.addEventListener("click", function(){ 
-        let computerChoice = document.getElementById("computer-choice");
-        let computerWeapon = Math.floor(Math.random() * 3);
-        if (computerWeapon === 0) {
-            computerChoice.innerHTML = `<i class="fa-solid fa-hand-fist"></i>`;
-            checkWinner(computerWeapon);
-        } else if (computerWeapon === 1) {
-            computerChoice.innerHTML = `<i class="fa-solid fa-hand"></i>`;
-            checkWinner(computerWeapon);
-        } else if (computerWeapon === 2) {
-            computerChoice.innerHTML = `<i class="fa-solid fa-hand-scissors"></i>`;
-            checkWinner(computerWeapon);
-        } 
-    })
 }
 
+function runGame() {
 
-/** This function pulls the user's chosen weapon and compares it against the computer's. 
- * based on this comparison the user's or the computer's score is increased.
- */
+}
+
 function checkWinner(computerWeapon) {
-    let userWeapon = document.getElementById("user-choice");
-    /**converts user-choice data-type into an int */
-    userSelection = parseInt(userWeapon.getAttribute("data-type"));
-    /**where selections are equal result is a tie/draw */
-    if (userSelection == computerWeapon) {
-        draw();
-    } else if (userSelection == 0) {
-        if (computerWeapon == 1) {
-            increaseComputerScore();
-        } else if (computerWeapon == 2) {
-            increaseUserScore();
-        }
-    } else if (userSelection == 1) {
-        if (computerWeapon == 2) {
-            increaseComputerScore();
-        } else if (computerWeapon == 0) {
-            increaseUserScore();
-        }
-    } else if (userSelection == 2) {
-        if (computerWeapon == 0) {
-            increaseComputerScore();
-        } else if (computerWeapon == 1) {
-            increaseUserScore();
-        }
-}
 
 }
 
-
-
-
-/**Increaes user score by 1 and runs endGame() function*/
-function increaseUserScore() {
-    /** increases user's score by 1 - code taken from Love Maths*/
-    let score = parseInt(document.getElementById("won").innerText);
-    document.getElementById("won").innerText = ++score;
-    /** displays text that offers a new game, then runs endGame() function */
-    let playAgain = document.getElementById("play-again");
-    playAgain.innerHTML = "YOU WIN! Want to play again? Choose your weapon!"
-    endGame();
-} 
-
-/**Increaes computer score by 1 and runs endGame() function*/
-function increaseComputerScore() {
-    /** increases computer's score by 1 - code taken from Love Maths*/
-    let score = parseInt(document.getElementById("lost").innerText);
-    document.getElementById("lost").innerText = ++score;
-    /** displays text that offers a new game, then runs endGame() function */
-    let playAgain = document.getElementById("play-again");
-    playAgain.innerHTML = "YOU LOST! Want to play again? Choose your weapon!"
-    endGame();
-}
-
-/** displays text showing result was a tie and the runs endGame() function */
-function draw() {
-    let playAgain = document.getElementById("play-again");
-    playAgain.innerHTML = "IT'S A TIE! Want to play again? Choose your weapon!"
-    endGame();
-}
-
-/**hides play button once game is complete */
 function endGame() {
-    let playsButton = document.getElementById("show-play-button");
-    playsButton.setAttribute('id', 'play-button');
+
 }
 
+function increaseUserScore() {
+
+}
+
+function increaseComputerScore() {
+
+}
+
+function draw(){
+
+}
