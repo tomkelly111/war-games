@@ -30,15 +30,19 @@ function gameSelector(weaponType) {
 function rockGame() {
     let rockElement = document.getElementById("user-choice");
     rockElement.outerHTML = `<span id="user-choice" data-type="0"><i class="fa-solid fa-hand-fist"></i></span>`;
-    startGame()
+    startGame();
 }
 
 function paperGame() {
-    console.log("paperGame success")
+    let paperElement = document.getElementById("user-choice");
+    paperElement.outerHTML = `<span id="user-choice" data-type="1"><i class="fa-solid fa-hand"></i></span>`;
+    startGame();
 }
 
 function scissorsGame() {
-    console.log("scissorsGame success")
+    let scissorsElement = document.getElementById("user-choice");
+    scissorsElement.outerHTML = `<span id="user-choice" data-type="2"><i class="fa-solid fa-hand-scissors"></i></span>`;
+    startGame();
 }
 
 
