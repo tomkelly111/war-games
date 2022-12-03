@@ -25,6 +25,8 @@ function gameSelector(weaponType) {
         gameSelector(weaponType);
     } let computerChoice = document.getElementById("computer-choice");
     computerChoice.innerHTML = `<i class="fa-regular fa-circle-question"></i>`;
+    let playAgain = document.getElementById("play-again");
+    playAgain.innerHTML = "";
 }
 
 function rockGame() {
