@@ -102,9 +102,15 @@ function endGame() {
 }
 
 
-
+/**Increaes user score by 1 and runs endGame() function*/
 function increaseUserScore() {
-    console.log("increase user score success")
+    /** increases user's score by 1 */
+    let Score = parseInt(document.getElementById("won").innerText);
+    document.getElementById("won").innerText = ++Score;
+    /** displays text that offers a new game, then runs endGame() function */
+    let playAgain = document.getElementById("play-again");
+    playAgain.innerHTML = "YOU WIN! Want to play again? Choose your weapon!"
+    endGame();
 } 
 
 function increaseComputerScore() {
