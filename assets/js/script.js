@@ -34,7 +34,12 @@ function gameSelector(weaponType) {
         let randomWeapon = Math.floor(Math.random() * 3);
         let weaponType = randomWeapon.toString();
         gameSelector(weaponType);
-    }
+    } /*resets image on computer side to question mark*/
+    let computerChoice = document.getElementById("computer-choice");
+    computerChoice.innerHTML = `<i class="fa-regular fa-circle-question"></i>`;
+    /*deletes results text when new game is started*/
+    let playAgain = document.getElementById("play-again");
+    playAgain.innerHTML = "";
 }
 
 /** This function displays the play button and when the play button is clicked 
