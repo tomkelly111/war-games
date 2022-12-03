@@ -121,5 +121,6 @@ function draw(){
 
 
 function endGame() {
-    console.log("endGame")
+    let playsButton = document.getElementById("show-play-button");
+    playsButton.setAttribute('id', 'play-button');
 }
