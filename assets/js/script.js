@@ -99,11 +99,18 @@ function checkWinner(computerWeapon) {
 function increaseUserScore() {
     let score = parseInt(document.getElementById("won").innerText);
     document.getElementById("won").innerText = ++score;
+    let playAgain = document.getElementById("play-again");
+    playAgain.innerHTML = "YOU WIN! Want to play again? Choose your weapon!"
+    endGame();
+    
 }
 
 function increaseComputerScore() {
     let score = parseInt(document.getElementById("lost").innerText);
     document.getElementById("lost").innerText = ++score;
+    let playAgain = document.getElementById("play-again");
+    playAgain.innerHTML = "YOU LOST! Want to play again? Choose your weapon!"
+    endGame();
 }
 
 function draw(){
@@ -112,5 +119,5 @@ function draw(){
 
 
 function endGame() {
-
+    console.log("endGame sucess")
 }
