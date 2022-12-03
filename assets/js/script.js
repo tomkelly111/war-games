@@ -128,7 +128,9 @@ function draw() {
     endGame();
 }
 
+/**hides play button once game is complete */
 function endGame() {
-        
+    let playsButton = document.getElementById("show-play-button");
+    playsButton.setAttribute('id', 'play-button');
 }
 
