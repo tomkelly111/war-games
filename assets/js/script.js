@@ -10,14 +10,14 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 /**
- * This function takes the data-type of the item the user clicked on and changes the image shown 
+ * This function takes the data-type (weaponType) of the item the user clicked on and changes the image shown 
  * to represent the user's chosen "weapon". The function then runs the startGame() function.
  */
 function gameSelector(weaponType) {
     if (weaponType === "0") {
         let rockElement = document.getElementById("user-choice");
         rockElement.outerHTML = `<span id="user-choice" data-type="0"><i class="fa-solid fa-hand-fist"></i></span>`;
-        startGame();;
+        startGame();
     } else if (weaponType === "1") {
         let paperElement = document.getElementById("user-choice");
         paperElement.outerHTML = `<span id="user-choice" data-type="1"><i class="fa-solid fa-hand"></i></span>`;
@@ -39,7 +39,10 @@ function gameSelector(weaponType) {
 
 
 function startGame() {
- console.log("start game success")
+    /** Changes ID of play-button so that it is visible once user has selected their weapon */
+    playButton = document.getElementById("play-button");
+    playButton.setAttribute("id", "show-play-button");
+    
 }
 
 
