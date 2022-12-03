@@ -71,21 +71,42 @@ function runGame() {
 }
 
 function checkWinner(computerWeapon) {
-    console.log("checkwinner success");
-}
+    let userWeapon = document.getElementById("user-choice");
+    userSelection = parseInt(userWeapon.getAttribute("data-type"));
+    if (userSelection === computerWeapon) {
+        draw();
+    } else if (userSelection == 0) {
+        if (computerWeapon == 1) {
+            increaseComputerScore();
+        } else if (computerWeapon == 2) {
+            increaseUserScore();
+        }
+    } else if (userSelection == 1) {
+        if (computerWeapon == 2) {
+            increaseComputerScore();
+        } else if (computerWeapon == 0) {
+            increaseUserScore();
+        }
+    } else if (userSelection == 2) {
+        if (computerWeapon == 0) {
+            increaseComputerScore();
+        } else if (computerWeapon == 1) {
+            increaseUserScore();
+        }
+} }
 
 function endGame() {
 
 }
 
 function increaseUserScore() {
-
+    console.log("increase user score success")
 }
 
 function increaseComputerScore() {
-
+    console.log("increase comp score success")
 }
 
 function draw(){
-
+    console.log("draw sucess")
 }
