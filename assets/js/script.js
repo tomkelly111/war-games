@@ -37,17 +37,62 @@ function gameSelector(weaponType) {
     }
 }
 
-
+/** This function displays the play button and when the play button is clicked 
+ * a random number between 0-2 is generated for the computer's weapon, the computer's weapon is then
+ * displayed and the checkWinner() function is ran.
+ */
 function startGame() {
     /** Changes ID of play-button so that it is visible once user has selected their weapon */
     playButton = document.getElementById("play-button");
     playButton.setAttribute("id", "show-play-button");
-    
+
+    let letsBattle = document.getElementById("show-play-button");
+    letsBattle.addEventListener("click", function(){ 
+        let computerChoice = document.getElementById("computer-choice");
+        let computerWeapon = Math.floor(Math.random() * 3);
+        if (computerWeapon === 0) {
+            computerChoice.innerHTML = `<i class="fa-solid fa-hand-fist"></i>`;
+            checkWinner(computerWeapon);
+        } else if (computerWeapon === 1) {
+            computerChoice.innerHTML = `<i class="fa-solid fa-hand"></i>`;
+            checkWinner(computerWeapon);
+        } else if (computerWeapon === 2) {
+            computerChoice.innerHTML = `<i class="fa-solid fa-hand-scissors"></i>`;
+            checkWinner(computerWeapon);
+        } 
+    })
 }
 
 
-
-function checkWinner() {
+/** This function pulls the user's chosen weapon and compares it against the computer's. 
+ * based on this comparison the user's or the computer's score is increased.
+ */
+function checkWinner(computerWeapon) {
+    let userWeapon = document.getElementById("user-choice");
+    /**converts user-choice data-type into an int */
+    userSelection = parseInt(userWeapon.getAttribute("data-type"));
+    /**where selections are equal result is a tie/draw */
+    if (userSelection == computerWeapon) {
+        draw();
+    } else if (userSelection == 0) {
+        if (computerWeapon == 1) {
+            increaseComputerScore();
+        } else if (computerWeapon == 2) {
+            increaseUserScore();
+        }
+    } else if (userSelection == 1) {
+        if (computerWeapon == 2) {
+            increaseComputerScore();
+        } else if (computerWeapon == 0) {
+            increaseUserScore();
+        }
+    } else if (userSelection == 2) {
+        if (computerWeapon == 0) {
+            increaseComputerScore();
+        } else if (computerWeapon == 1) {
+            increaseUserScore();
+        }
+}
 
 }
 
@@ -59,11 +104,11 @@ function endGame() {
 
 
 function increaseUserScore() {
-
+    console.log("increase user score success")
 } 
 
 function increaseComputerScore() {
-   
+    console.log("increase computer score success")
 }
 
 function draw() {
