@@ -3,13 +3,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
     for (let button of buttons) {
         button.addEventListener("click", function() {
-            console.log("addEvent listner success")
+            let weaponType = this.getAttribute("data-type");
+            gameSelector(weaponType);
         });
     }
 });
 
 
-function gameSelector() {
+function gameSelector(weaponType) {
+    console.log("gameSelector success")
 }
 
 
