@@ -114,10 +114,12 @@ function increaseComputerScore() {
 }
 
 function draw(){
-    console.log("draw sucess")
+    let playAgain = document.getElementById("play-again");
+    playAgain.innerHTML = "IT'S A TIE! Want to play again? Choose your weapon!"
+    endGame();
 }
 
 
 function endGame() {
-    console.log("endGame sucess")
+    console.log("endGame")
 }
