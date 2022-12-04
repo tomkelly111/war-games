@@ -4,7 +4,9 @@ body {
     color: #E3F0FF;
     text-align: center;
 }
-
+h2 {
+    font-size: 3rem;
+}
 .game-area {
     background-color:#414656 ;
     box-sizing: border-box;
