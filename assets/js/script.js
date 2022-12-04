@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.getElementsByTagName("button");
 
@@ -102,9 +103,6 @@ function increaseComputerScore() {
     playAgain.innerHTML = "YOU LOST! Want to play again? Choose your weapon!";
     endGame();
 }
-
-
-
 
 function endGame() {
     let playsButton = document.getElementById("show-play-button");
