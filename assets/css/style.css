@@ -39,9 +39,9 @@ h2 {
     font-size: 2rem;
     margin: 15px;
     /*TAKEN FROM https://stackoverflow.com/questions/47127201/webkit-appearance-none-not-working-for-button*/
-    -webkit-appearance:none;
-    -moz-appearance:none;
-    appearance:none;
+    -webkit-appearance:none!important;
+    -moz-appearance:none!important;
+    appearance:none!important;
 
 }
 
