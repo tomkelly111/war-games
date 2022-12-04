@@ -68,6 +68,20 @@ body {
     font-size: larger;
 }
 
+#you-id {
+    position:relative;
+    right: 5px;
+    font-size: medium;
+    width: 60px;
+}
+
+#comp-id {
+    position:relative;
+    left: 25px;
+    font-size: medium;
+    width: 100px;
+}
+
 @media only screen and (min-width: 600px) {
     .results-lost {
         position: fixed;
