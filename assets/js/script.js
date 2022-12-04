@@ -50,7 +50,7 @@ function scissorsGame() {
 
 
 function startGame() {
-    playButton = document.getElementById("play-button");
+    let playButton = document.getElementById("play-button");
     playButton.setAttribute("id", "show-play-button");
     
     let letsBattle = document.getElementById("show-play-button");
@@ -74,7 +74,7 @@ function runGame() {
 
 function checkWinner(computerWeapon) {
     let userWeapon = document.getElementById("user-choice");
-    userSelection = parseInt(userWeapon.getAttribute("data-type"));
+    let userSelection = parseInt(userWeapon.getAttribute("data-type"));
     if (userSelection === computerWeapon) {
         draw();
     } else if (userSelection == 0) {
@@ -102,7 +102,7 @@ function increaseUserScore() {
     let score = parseInt(document.getElementById("won").innerText);
     document.getElementById("won").innerText = ++score;
     let playAgain = document.getElementById("play-again");
-    playAgain.innerHTML = "YOU WIN! Want to play again? Choose your weapon!"
+    playAgain.innerHTML = "YOU WIN! Want to play again? Choose your weapon!";
     endGame();
     
 }
@@ -111,13 +111,13 @@ function increaseComputerScore() {
     let score = parseInt(document.getElementById("lost").innerText);
     document.getElementById("lost").innerText = ++score;
     let playAgain = document.getElementById("play-again");
-    playAgain.innerHTML = "YOU LOST! Want to play again? Choose your weapon!"
+    playAgain.innerHTML = "YOU LOST! Want to play again? Choose your weapon!";
     endGame();
 }
 
 function draw(){
     let playAgain = document.getElementById("play-again");
-    playAgain.innerHTML = "IT'S A TIE! Want to play again? Choose your weapon!"
+    playAgain.innerHTML = "IT'S A TIE! Want to play again? Choose your weapon!";
     endGame();
 }
 
