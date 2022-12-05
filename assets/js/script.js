@@ -9,10 +9,9 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
-/**This function takes the users chosen weaponType and runs the appropriate game,
- * If random is chosen then a random number is generated and the appropriate game is selected.
- * 
- */
+/**This function takes the users chosen weaponType and changes the image displayed to that weapon.
+ * If random is chosen then a random number between 0-2 is generated and fed back into the function.
+ *startGame() function is then ran*/
 function gameSelector(weaponType) {
     if (weaponType === "0") {
         let rockElement = document.getElementById("user-choice");
@@ -30,12 +29,16 @@ function gameSelector(weaponType) {
         let randomWeapon = Math.floor(Math.random() * 3);
         let weaponType = randomWeapon.toString();
         gameSelector(weaponType);
-    } let computerChoice = document.getElementById("computer-choice");
+    } /**This part of the function resets the computer's displayed image back to neuteral and deletes 
+    the winning or losing text.
+    */let computerChoice = document.getElementById("computer-choice");
     computerChoice.innerHTML = `<i class="fa-regular fa-circle-question"></i>`;
     let playAgain = document.getElementById("play-again");
     playAgain.innerHTML = "";
 }
-
+/**This function changes the ID of the play button so it is now visible. An event listner is added to the button
+ * so when clicked runGame() function is ran.
+ */
 function startGame() {
     let playButton = document.getElementById("play-button");
     playButton.setAttribute("id", "show-play-button");
@@ -44,6 +47,10 @@ function startGame() {
     letsBattle.addEventListener("click", runGame);
 }
 
+/** This function generates a random number between 0-2 for the computer's chosen weapon.
+ * The function then checks the computer's chohce and changes the image displayed. The
+ * checkWinner() function is then ran.
+ */
 function runGame() {
     let computerChoice = document.getElementById("computer-choice");
     let computerWeapon = Math.floor(Math.random() * 3);
@@ -58,7 +65,10 @@ function runGame() {
         checkWinner(computerWeapon);
     } 
 }
-
+/** This function finds the data-type of the user's chosen weapon and compares it against the computer's.
+ * a series of if else statements are used and depending on the winner increaseComputerScore() or
+ * increaseUserScore is ran"
+ */
 function checkWinner(computerWeapon) {
     let userWeapon = document.getElementById("user-choice");
     let userSelection = parseInt(userWeapon.getAttribute("data-type"));
@@ -86,7 +96,9 @@ function checkWinner(computerWeapon) {
         }
 } }
 
-
+/**This function increases the user's score by 1, displays winning text and offers a new game. The
+ * endGame function is then ran. 
+ */
 function increaseUserScore() {
     let score = parseInt(document.getElementById("won").innerText);
     document.getElementById("won").innerText = ++score;
@@ -95,7 +107,10 @@ function increaseUserScore() {
     endGame();
     
 }
-
+/**This function increases the computer's score by 1, displays losing text and offers a new game. The
+ * endGame function is then ran.
+ * 
+ */
 function increaseComputerScore() {
     let score = parseInt(document.getElementById("lost").innerText);
     document.getElementById("lost").innerText = ++score;
@@ -104,6 +119,8 @@ function increaseComputerScore() {
     endGame();
 }
 
+/**This function hides the play button from view.
+ */
 function endGame() {
     let playsButton = document.getElementById("show-play-button");
     playsButton.setAttribute('id', 'play-button');

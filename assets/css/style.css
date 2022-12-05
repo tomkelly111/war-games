@@ -45,6 +45,8 @@ h2 {
 
 }
 
+/** changes the color of the buttons when hovered over
+*/
 .btn:active,
 .btn:hover {
     background-color: #023B71;
@@ -65,6 +67,9 @@ h2 {
     padding: 20px;
 }
 
+/** When this ID is used the play-button is hidden from view to avoid user 
+clicking button too early.
+*/
 #play-button {
     display:none;   
 }
@@ -87,6 +92,7 @@ h2 {
     width: 100px;
 }
 
+/** Changes display position of results when screen is wider than 600px**/
 @media only screen and (min-width: 600px) {
     .results-lost {
         position: fixed;
