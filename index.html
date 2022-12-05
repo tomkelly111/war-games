@@ -19,17 +19,17 @@
     </h2>
 
     <div class="game-area"> 
-        <div class="user-choices"> Choose Your Weapon...
-        <div aria-label="rock" data-type="0" id="Rock" class="btn">
+        <div role="button" aria-label="rock" class="user-choices"> Choose Your Weapon...
+        <div data-type="0" id="Rock" class="btn">
             <i class="fa-solid fa-hand-fist"></i>
         </div>
-        <div aria-label="paper" data-type="1" id="Paper" class="btn">
+        <div role="button" aria-label="paper" data-type="1" id="Paper" class="btn">
             <i class="fa-solid fa-hand"></i>
         </div>
-        <div aria-label="scissors" data-type="2" id="Scissors" class="btn">
+        <div role="button" aria-label="scissors" data-type="2" id="Scissors" class="btn">
             <i class="fa-solid fa-hand-scissors"></i>
         </div>
-        <div aria-label="random"  data-type="3" id="Random" class="btn">
+        <div role="button" aria-label="random"  data-type="3" id="Random" class="btn">
             <i class="fa-regular fa-circle-question"></i>
         </div>
         </div>
@@ -38,7 +38,7 @@
             <span id="comp-id">COMPUTER</span></div>
             <span id="user-choice"><i class="fa-regular fa-circle-question"></i></span>
             <span>v</span>
-            <span id="computer-choice"><i class="fa-solid fa-computer"></i></i></span>
+            <span id="computer-choice"><i class="fa-solid fa-computer"></i></span>
             
         </div>
         <button id="play-button" data-type="submit">Let's Battle!</button>
@@ -50,11 +50,12 @@
     <div class="results-lost">
         <p class="results">Battles Lost <span id="lost">0</span></p>
     </div>
+    <footer>
+        <div>How to play: Scissors beats Paper which beats Rock which beats Scissors!</div>
+        <div id="credit"><a href="https://www.flaticon.com/free-icons/rock-paper-scissors" title="rock paper scissors icons">Rock paper scissors icons created by Freepik - Flaticon</a></div>
+    </footer>
     <script src="assets/js/script.js"></script>
 </body>
-<footer>
-    <div>How to play: Scissors beats Paper which beats Rock which beats Scissors!</div>
-    <div id="credit"><a href="https://www.flaticon.com/free-icons/rock-paper-scissors" title="rock paper scissors icons">Rock paper scissors icons created by Freepik - Flaticon</a></div>
-</footer>
+
 
 </html>
