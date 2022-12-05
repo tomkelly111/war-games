@@ -76,22 +76,22 @@ function checkWinner(computerWeapon) {
         let playAgain = document.getElementById("play-again");
         playAgain.innerHTML = "IT'S A TIE! Want to play again? Choose your weapon!";
         endGame();
-    } else if (userSelection == 0) {
-        if (computerWeapon == 1) {
+    } else if (userSelection === 0) {
+        if (computerWeapon === 1) {
             increaseComputerScore();
-        } else if (computerWeapon == 2) {
+        } else if (computerWeapon === 2) {
             increaseUserScore();
         }
-    } else if (userSelection == 1) {
-        if (computerWeapon == 2) {
+    } else if (userSelection === 1) {
+        if (computerWeapon === 2) {
             increaseComputerScore();
-        } else if (computerWeapon == 0) {
+        } else if (computerWeapon === 0) {
             increaseUserScore();
         }
-    } else if (userSelection == 2) {
-        if (computerWeapon == 0) {
+    } else if (userSelection === 2) {
+        if (computerWeapon === 0) {
             increaseComputerScore();
-        } else if (computerWeapon == 1) {
+        } else if (computerWeapon === 1) {
             increaseUserScore();
         }
 } }
