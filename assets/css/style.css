@@ -133,7 +133,7 @@ footer {
 @media only screen and (min-width: 600px) {
     .results-lost {
         position: fixed;
-        top: 200px;
+        top: 100px;
         left: 75vw;
         font-size: xx-large;
         max-width:200px;
@@ -141,7 +141,7 @@ footer {
     }
     .results-won {
         position: fixed;
-        top: 200px;
+        top: 100px;
         right: 75vw;
         font-size: xx-large;
         max-width: 200px;
