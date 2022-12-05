@@ -23,7 +23,6 @@ h2 {
 }
 
 .user-choices {
-    display:flexbox;
     min-height:220px;
     width: 75%;
     max-width: 200px;
