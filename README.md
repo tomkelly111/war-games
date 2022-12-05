@@ -1,6 +1,6 @@
 # [War Games](https://tomkelly111.github.io/war-games/)
 
-<img width="725" alt="image" src="https://user-images.githubusercontent.com/111172617/205503281-41a0e210-cf77-42a4-b259-2cb5291edfed.png">
+<img width="596" alt="image" src="https://user-images.githubusercontent.com/111172617/205729930-8afe3640-d974-4e21-8f2b-0b9008fd3508.png">
 
 
 [War Games](https://tomkelly111.github.io/war-games/) is a website which is optimsied for mobile and is intended to be an entertaining but easy to use game. The game uses minimilist design and clear images to ensure use of the game is as simple as possible. Features such as hiding the "Let's Battle!" button until the user has selected their weapon make sure there is no room for user error. The game also helpfully keeps track of games won and lost and provides the user with their current score.
@@ -10,12 +10,18 @@
 ### Games Area
 The games area displays 4 options for the user to select - rock, paper, scissors or random. There are no other clickable options and this is intentional to avoid any errors occuring. Once an option is selcted the option will display in the Battle Ground area.
 
+<img width="264" alt="image" src="https://user-images.githubusercontent.com/111172617/205730031-6e7dfb04-5712-4d2b-b0e1-8697a581f1ce.png">
+
+
 ### Battle Ground
 In the Battle Ground the user's choice is displayed. Once the choice has been selected the play button appears displaying the text "Let's Battle!".
 
+<img width="202" alt="image" src="https://user-images.githubusercontent.com/111172617/205730097-315820c7-27f5-4c89-929e-53c91741cfaa.png">
 
 ### Results Section
-Once the user has clicked Let's Battle the scores are updated depending on who won.
+Once the user has clicked Let's Battle the scores are updated depending on who won. This section will move depending on the width of the device used.
+
+<img width="175" alt="image" src="https://user-images.githubusercontent.com/111172617/205730279-8eab7b21-7ea7-4243-be37-25e5b268102f.png">
 
 ### Javascript
 The Javascript code for War Games contains comments explaining the process and functions used. The key code is contained in the checkWinner() function. This checks the user's choice against the computer's randomly generated selection using a series of "if else" statements. Initially I attempted to minimise the use of "if else" statements by using a mathematic formula, however I decided against this as a I could not come up with a workable solution due to the circular dependencies of the winner. i.e. rock < paper < scissors < rock...
@@ -92,7 +98,7 @@ JAVASCRIPT - No errors were returned when code was checked with the official [JS
 Accessibility - I confirmed the code used is accessible by using lighthouse in devtools.
 
 ### Unfixed Bugs
-It was discovered late in the development stages that the buttons do not display correctly on IOS devices. A fix was not discovered for this. Searching online shows that this is a known issue, a possible solution was found on https://stackoverflow.com/questions/47127201/webkit-appearance-none-not-working-for-button and this was implemented however it did not solve the issue. It was difficult to assess whether a fix had worked as it is necessary to push the changes to the repository, make sure the changes have been deployed to the published site and check the updated site on IOS devices. I do not have easy access to IOS devices so this issue remains unfixed as far as I am aware. 
+It was discovered late in the development stages that the buttons do not display correctly on IOS devices. A fix was not discovered for this. Searching online shows that this is a known issue, a possible solution was found on https://stackoverflow.com/questions/47127201/webkit-appearance-none-not-working-for-button and this was implemented however it did not solve the issue. Instead I opted to replace the button elements with divs and this appears to have solved the issue.
 
 ## DEPLOYMENT
 ### Publication
@@ -111,11 +117,11 @@ In order to deploy the site locally a user can enter "git clone https://tomkelly
 ## CREDITS
 
 ### Color
-- Colors were selected from the following site: https://mycolor.space/?hex=%2300452D&sub=1 
+- Colors were selected from the following site: https://mycolor.space/
 
 ### Media
 - Logo image was taken from the following site: https://www.flaticon.com/free-icons/rock-paper-scissors and is credited at the bottom of the page.
-- Button icons are taken from the following site: https://fontawesome.com/
+- User choice icons were taken from the following site: https://fontawesome.com/
 		
 
 
