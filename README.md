@@ -23,6 +23,12 @@ Once the user has clicked Let's Battle the scores are updated depending on who w
 
 <img width="175" alt="image" src="https://user-images.githubusercontent.com/111172617/205730279-8eab7b21-7ea7-4243-be37-25e5b268102f.png">
 
+
+### Footer
+The footer details the rules of the game and credit for the logo.
+
+<img width="366" alt="image" src="https://user-images.githubusercontent.com/111172617/205739950-109b9903-5672-4b3f-9114-aef2f4d80226.png">
+
 ### Javascript
 The Javascript code for War Games contains comments explaining the process and functions used. The key code is contained in the checkWinner() function. This checks the user's choice against the computer's randomly generated selection using a series of "if else" statements. Initially I attempted to minimise the use of "if else" statements by using a mathematic formula, however I decided against this as a I could not come up with a workable solution due to the circular dependencies of the winner. i.e. rock < paper < scissors < rock...
 
@@ -90,15 +96,24 @@ The website link was provided to four users all of whom were able to use the gam
 
 HTML - No errors were returned when code was checked with the official [W3C validator](https://validator.w3.org/).
 
+<img width="891" alt="image" src="https://user-images.githubusercontent.com/111172617/205738984-92fb21f6-46ca-44c0-b7b9-ee769721a168.png">
 
 CSS - No errors were returned when code was checked with the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/).
 
+<img width="902" alt="image" src="https://user-images.githubusercontent.com/111172617/205739164-c4bb6321-f9cd-4a7d-880d-b81f994d2b99.png">
+
 JAVASCRIPT - No errors were returned when code was checked with the official [JS Hint validator](https://jshint.com/).
+
+<img width="299" alt="image" src="https://user-images.githubusercontent.com/111172617/205739254-c6ea7a10-5c1a-4783-a2fd-5eb5f62b6bdc.png">
 
 Accessibility - I confirmed the code used is accessible by using lighthouse in devtools.
 
+<img width="242" alt="image" src="https://user-images.githubusercontent.com/111172617/205739456-9e758c90-db96-4591-aca8-7759ddb60c43.png">
+
 ### Unfixed Bugs
 It was discovered late in the development stages that the buttons do not display correctly on IOS devices. A fix was not discovered for this. Searching online shows that this is a known issue, a possible solution was found on https://stackoverflow.com/questions/47127201/webkit-appearance-none-not-working-for-button and this was implemented however it did not solve the issue. Instead I opted to replace the button elements with divs and this appears to have solved the issue.
+
+The rules of the game and the footer do not sit at the bottom of the page on tablet devices.
 
 ## DEPLOYMENT
 ### Publication
