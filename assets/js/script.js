@@ -1,7 +1,7 @@
 /*jshint esversion: 6 */
 document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.getElementsByTagName("button");
-
+/*This for loop was copied from the Love Maths project by Code Institute*/
     for (let button of buttons) {
         button.addEventListener("click", function() {
             let weaponType = this.getAttribute("data-type");
@@ -100,6 +100,7 @@ function checkWinner(computerWeapon) {
  * endGame function is then ran. 
  */
 function increaseUserScore() {
+    /*The following two lines were copied from the Love Maths project by Code Institute*/
     let score = parseInt(document.getElementById("won").innerText);
     document.getElementById("won").innerText = ++score;
     let playAgain = document.getElementById("play-again");
@@ -112,6 +113,7 @@ function increaseUserScore() {
  * 
  */
 function increaseComputerScore() {
+    /*The following two lines were copied from the Love Maths project by Code Institute*/
     let score = parseInt(document.getElementById("lost").innerText);
     document.getElementById("lost").innerText = ++score;
     let playAgain = document.getElementById("play-again");
