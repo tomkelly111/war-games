@@ -1,6 +1,6 @@
 /*jshint esversion: 6 */
 document.addEventListener("DOMContentLoaded", function() {
-    let buttons = document.getElementsByTagName("button");
+    let buttons = document.getElementsByClassName("btn");
 /*This for loop was copied from the Love Maths project by Code Institute*/
     for (let button of buttons) {
         button.addEventListener("click", function() {
