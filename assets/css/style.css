@@ -73,12 +73,31 @@ h2 {
     padding: 20px;
 }
 
-/** When this ID is used the play-button is hidden from view to avoid user 
-clicking button too early.
-*/
+/* When this ID is used the play-button is hidden from view to avoid user 
+clicking button too early.*/
 #play-button {
     display:none;   
 }
+
+/* When this ID is used the play-button is visible.*/
+
+#show-play-button {
+    background-color: #E3F0FF;
+    font-family: "Roboto Condensed", Sans-serif;
+    font-size: larger;
+    color:#023B71;
+
+    border-radius: 5px;
+    font-weight: 300;
+}
+
+#show-play-button:active,
+#show-play-button:hover {
+    background-color: #023B71;
+    color: #E3F0FF;
+    border-color:#E3F0FF;
+}
+
 
 .results {
     font-size: larger;
