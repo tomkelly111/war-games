@@ -32,7 +32,7 @@ function gameSelector(weaponType) {
     } /**This part of the function resets the computer's displayed image back to neuteral and deletes 
     the winning or losing text.
     */let computerChoice = document.getElementById("computer-choice");
-    computerChoice.innerHTML = `<i class="fa-regular fa-circle-question"></i>`;
+    computerChoice.innerHTML = `<i class="fa-solid fa-computer"></i>`;
     let playAgain = document.getElementById("play-again");
     playAgain.innerHTML = "";
 }
