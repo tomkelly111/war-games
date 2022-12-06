@@ -3,23 +3,23 @@
 <img width="596" alt="image" src="https://user-images.githubusercontent.com/111172617/205729930-8afe3640-d974-4e21-8f2b-0b9008fd3508.png">
 
 
-[War Games](https://tomkelly111.github.io/war-games/) is a website which is optimsied for mobile and is intended to be an entertaining but easy to use game. The game uses minimilist design and clear images to ensure use of the game is as simple as possible. Features such as hiding the "Let's Battle!" button until the user has selected their weapon make sure there is no room for user error. The game also helpfully keeps track of games won and lost and provides the user with their current score.
+[War Games](https://tomkelly111.github.io/war-games/) is a website which is intended to be an entertaining but easy to use game. The game uses minimilist design and clear images to ensure use of the game is as simple as possible. Features such as hiding the "Let's Battle!" button until the user has selected their weapon make sure there is no room for user error. The game also helpfully keeps track of games won and lost and provides the user with their current score.
 
 ## FEATURES
 
-### Games Area
-The games area displays 4 options for the user to select - rock, paper, scissors or random. There are no other clickable options and this is intentional to avoid any errors occuring. Once an option is selcted the option will display in the Battle Ground area.
+### User choices Areaa
+The User Choices Area displays 4 options for the user to select - rock, paper, scissors or random. There are no other clickable options and this is intentional to avoid any errors occuring. If Random is selected the game will randomly generate  an option for the user. 
 
 <img width="264" alt="image" src="https://user-images.githubusercontent.com/111172617/205730031-6e7dfb04-5712-4d2b-b0e1-8697a581f1ce.png">
 
 
 ### Battle Ground
-In the Battle Ground the user's choice is displayed. Once the choice has been selected the play button appears displaying the text "Let's Battle!".
+In the Battle Ground once selected, the user's choice is displayed in place of a question mark. Once the choice has been selected the play button appears displaying the text "Let's Battle!".
 
-<img width="202" alt="image" src="https://user-images.githubusercontent.com/111172617/205730097-315820c7-27f5-4c89-929e-53c91741cfaa.png">
+<img width="160" alt="image" src="https://user-images.githubusercontent.com/111172617/205855937-168a5876-2f44-495c-b1e8-29a7b6077be3.png">
 
 ### Results Section
-Once the user has clicked Let's Battle the scores are updated depending on who won. This section will move depending on the width of the device used.
+Once the user has clicked Let's Battle the scores are updated depending on who won. The results section will move depending on the width of the device used.
 
 <img width="175" alt="image" src="https://user-images.githubusercontent.com/111172617/205730279-8eab7b21-7ea7-4243-be37-25e5b268102f.png">
 
